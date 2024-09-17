@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimun-scale=1,maximum-scale=1, initial-scale=1">
+    <title>Motorsport</title>
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="/assets/styles/stylesmodules.css">
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="brand">
+            <span class="lab la-phoenix-squadron"></span>
+            <h1 class="white">Lapard</h1><h1 class="">Motor</h1>
+        </div>
+        <div class="sidemenu">
+            <ul>
+                <li>
+                    <a href="/assets/views/index.html" class="">
+                        <span class="las la-home"></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Usuarios/usuarios.html" class="">
+                        <span class="las la-user-tie"></span>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Roles/roles.html">
+                        <span class="las la-user-shield"></span>
+                        <span>Roles</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Clientes/clientes.html" class="">
+                        <span class="las la-user-friends"></span>
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Compras/compras.html" class="active">
+                        <span class="las la-cart-plus"></span>
+                        <span>Compras</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Repuestos/repuestos.html">
+                        <span class="las la-wrench"></span>
+                        <span>Repuestos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Categorias/categorias.html">
+                        <span class="las la-tags"></span>
+                        <span>Categorias de repuestos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Proveedores/proveedores.html">
+                        <span class="las la-truck-moving"></span>
+                        <span>Proveedores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ventas.html">
+                        <span class="las la-shopping-bag"></span>
+                        <span>Ventas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reportes.html">
+                        <span class="las la-file-invoice-dollar "></span>
+                        <span>Reportes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/login.html">
+                        <span class="las la-sign-out-alt "></span>
+                        <span>Cerrar Sesion</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <label for="menu-toggle" class="menu-toggler">
+                <span class="las la-bars"></span>
+            </label>
+            <h1 class="white">Compras</h1>
+            <!-- <div class="search">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Buscar...">
+            </div> -->
+            <div class="head-icons">
+                <span class="las la-bell"></span>
+                <span class="las la-bookmark"></span>
+                <span class="las la-user"></span>
+            </div>
+            
+        </header>
+        <main>
+            <!-- <h1>Clientes</h1> -->
+            <div class="buscarC">
+                <div class="search2">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Buscar Compra...">
+                </div>
+                <div class="crearc">
+                    <span class="las la-plus"></span>
+                    <a href="/assets/views/Compras/compracrear.html">Nueva Compra</a>
+                </div>
+            </div>
+                <div class="recent-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Fecha</th>
+                                <th>Id Proveedor</th>
+                                <th>Estado</th>
+                                <th>Operaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1273</td>
+                                <td>15/08/2024</td>
+                                <td>3</td>
+                                <td>Realizada</td>
+                                <td>
+                                    <div class="actions">
+                                        <span class="las la-edit blue"></span>
+                                        <span class="las la-eye"></span>
+                                        <span class="las la-ban red"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1098</td>
+                                <td>15/08/2024</td>
+                                <td>1</td>
+                                <td>Realizada</td>
+                                <td>
+                                    <div class="actions">
+                                        <span class="las la-edit blue"></span>
+                                        <span class="las la-eye"></span>
+                                        <span class="las la-ban red"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1125</td>
+                                <td>15/08/2024</td>
+                                <td>2</td>
+                                <td>Realizada</td>
+                                <td>
+                                    <div class="actions">
+                                        <span class="las la-edit blue"></span>
+                                        <span class="las la-eye"></span>
+                                        <span class="las la-ban red"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="new-users">
+                    <h2>Ultimas Compras</h2>
+                    <div class="user-list">
+                        <div class="user">
+                            <img>
+                            <h2>Manubrio Xt660</h2>
+                        </div>
+                        <div class="user">
+                            <img>
+                            <h2>Tornilleria</h2>
+                        </div>
+                        <div class="user">
+                            <img>
+                            <h2>LLantas</h2>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <label id="close-mobile-menu" for="menu-toggle"></label>        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="/assets/js/oders.js"></script>
+
+</body>
+</html>

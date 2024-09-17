@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --bg: #181a1e;
+    --bg-body: #202528;
+    --color-primary: #6C9BCF;
+    --color-dark-variant: #677483;
+    --color-white: #fff;
+    --card-border-radius: 2rem;
+    --card-padding: 1.4rem;
+}
+
+body{
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #e03838;
+    text-decoration: none;
+}
+
+.close-icon:hover {
+    color: #ff0000;
+}
+
+
+/* Estilos para oscurecer el fondo */
+/* .checkbox-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+/* Estilos para el contenido del modal */
+.checkbox-container {
+    background-color: var(--bg-body);
+    color: var(--color-white);
+    /* padding: var(--card-padding); */
+    border-radius: var(--card-border-radius);
+    /* margin: 25px auto; */
+    /* box-shadow: var(--box-shadow); */
+    width: 100%;
+    max-width: 470px;
+    height: 100%; /* Limita el ancho máximo */
+    margin: auto; /* Centra horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0.8rem;
+    padding: 10px;
+    /* transition: all 0.3s ease; */
+}
+
+.checkbox-container .inputss{
+    width: 100%;
+    outline: none;
+    border: none;
+    /* line-height: 1;  */
+    font-weight: 600;
+    font-size: 1.1rem;
+    height: 30px;
+    color: white; 
+    background-color: var(--bg);
+    padding: var(--card-padding); 
+    border-radius: var(--card-border-radius);
+} 
+
+.checkbox-container select{
+    width: 100%;
+    color: white;
+    background-color: var(--bg);
+    padding: 15px; 
+    border-radius: var(--card-border-radius);  
+}
+
+.btn {
+    width: 150px;
+    background-color: #3749eb;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 20px ;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+.btn:hover {
+    background-color: #4d84e2;
+}
+

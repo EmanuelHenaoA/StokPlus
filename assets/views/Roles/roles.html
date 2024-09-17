@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1,maximum-scale=1, initial-scale=1">
+    <title>Motorsport</title>
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="/assets/styles/stylesmodules.css">
+</head>
+<body onload="listRoles()">
+    <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="brand">
+            <span class="lab la-phoenix-squadron"></span>
+            <h1 class="white">Lapard</h1><h1 class="">Motor</h1>
+        </div>
+        <div class="sidemenu">
+            <ul>
+                <li>
+                    <a href="/assets/views/index.html" class="">
+                        <span class="las la-home"></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Usuarios/usuarios.html" class="">
+                        <span class="las la-user-tie"></span>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Roles/roles.html" class="active">
+                        <span class="las la-user-shield"></span>
+                        <span>Roles</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Clientes/clientes.html" class="">
+                        <span class="las la-user-friends"></span>
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Compras/compras.html">
+                        <span class="las la-cart-plus"></span>
+                        <span>Compras</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Repuestos/repuestos.html">
+                        <span class="las la-wrench"></span>
+                        <span>Repuestos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Categorias/categorias.html">
+                        <span class="las la-tags"></span>
+                        <span>Categorias de repuestos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/Proveedores/proveedores.html">
+                        <span class="las la-truck-moving"></span>
+                        <span>Proveedores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ventas.html">
+                        <span class="las la-shopping-bag"></span>
+                        <span>Ventas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reportes.html">
+                        <span class="las la-file-invoice-dollar "></span>
+                        <span>Reportes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/assets/views/login.html">
+                        <span class="las la-sign-out-alt red"></span>
+                        <span>Cerrar Sesion</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <label for="menu-toggle" class="menu-toggler">
+                <span class="las la-bars"></span>
+            </label>
+            <h1 class="white">Roles</h1>
+            <!-- <div class="search">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Buscar...">
+            </div> -->
+            <div class="head-icons">
+                <span class="las la-bell"></span>
+                <span class="las la-bookmark"></span>
+                <span class="las la-user"></span>
+            </div>
+            
+        </header>
+        <main>
+            <div class="buscarC">
+                <div class="search2">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Buscar Rol...">
+                </div>
+                <div class="crearc">
+                    <span class="las la-plus"></span>
+                    <a href="/assets/views/Roles/crearRol.html">Nuevo Rol</a>
+                </div>
+            </div>
+            <!-- <h1>Clientes</h1> -->
+            <!-- <div class="buscarC">
+                <div class="search2">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Buscar Rol...">
+                </div>
+                <div class="crearc" onclick="showModal()">
+                    <span class="las la-plus"></span>
+                    <a href="rolescrear.html">Nuevo Rol</a>
+                </div> -->
+                <!-- <div id="modal" class="modal">
+                    <form id="rolesForm" >
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <div class="modal-body">
+                                <h1>Crear Rol</h1>
+                                <input type="number" id="idRol" placeholder="ID" required>
+                                <input type="text" id="nombreRol" placeholder="Nombre" required>
+                                  <label>Selecciona los permisos y privilegios que deseas que tenga el rol:</label>  -->
+                                    <!-- Checkbox principal -->
+                              <!-- <div class="checkbox-container">
+                                    <label>
+                                        <input type="checkbox" class="privil" id="compras-checkbox" onclick="toggleOpciones()">
+                                            Compras
+                                    </label>        
+                                    <div id="opciones-secundarias">
+                                        <label>
+                                        <input type="checkbox" name="opciones" value="ver">
+                                            Ver
+                                        </label><br>
+                                        <label>
+                                        <input type="checkbox" name="opciones" value="crear">
+                                            Crear
+                                        </label><br>
+                                        <label>
+                                        <input type="checkbox" name="opciones" value="editar">
+                                            Editar
+                                        </label><br>
+                                        <label>
+                                        <input type="checkbox" name="opciones" value="eliminar">
+                                            Eliminar
+                                        </label>
+                                    </div>
+                                    <label>
+                                        <input type="checkbox" id="compras-checkbox" onclick="toggleOpciones()">
+                                            Ventas
+                                    </label>    
+                                    <label>
+                                        <input type="checkbox" id="compras-checkbox" onclick="toggleOpciones()">
+                                        Configuracion
+                                    </label> 
+                                    <label>
+                                        <input type="checkbox" id="compras-checkbox" onclick="toggleOpciones()">
+                                            Usuarios
+                                    </label>   
+                                </div>      -->
+                            <!-- </div>
+                            <button type="submit" class="btn">Crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+                <div class="recent-orders">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Estado</th>
+                                <th>Operaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="content">    
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="new-users">
+                    <h2>Roles Existentes</h2>
+                    <div class="user-list">
+                        <div class="user">
+                            <img>
+                            <h2>Administrador</h2>
+                        </div>
+                        <div class="user">
+                            <img>
+                            <h2>Gerente</h2>
+                        </div>
+                        <div class="user">
+                            <img>
+                            <h2>Empleado</h2>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <label id="close-mobile-menu" for="menu-toggle"></label>        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script> -->
+    <script src="/assets/js/functions.js"></script>
+</body>
+</html>
