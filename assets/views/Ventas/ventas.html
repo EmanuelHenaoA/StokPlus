@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimun-scale=1,maximum-scale=1, initial-scale=1">
-    <title>Motorsport</title>
-    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <link rel="stylesheet" href="/assets/styles/stylesmodules.css">
 </head>
-<body>
+<body onload="listSales()">
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="brand">
@@ -18,69 +18,69 @@
         <div class="sidemenu">
             <ul>
                 <li>
-                    <a href="/assets/views/index.html" class="">
+                    <a href="../index.html">
                         <span class="las la-home"></span>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/views/Usuarios/usuarios.html" class="">
+                    <a href="../Usuarios/usuarios.html">
                         <span class="las la-user-tie"></span>
                         <span>Usuarios</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/views/Roles/roles.html">
+                    <a href="../Roles/roles.html">
                         <span class="las la-user-shield"></span>
                         <span>Roles</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/views/Clientes/clientes.html" class="active">
+                    <a href="../Clientes/clientes.html">
                         <span class="las la-user-friends"></span>
                         <span>Clientes</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/views/Compras/compras.html">
+                    <a href="../Compras/compras.html">
                         <span class="las la-cart-plus"></span>
                         <span>Compras</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/views/Repuestos/repuestos.html">
+                    <a href="../Repuestos/repuestos.html">
                         <span class="las la-wrench"></span>
                         <span>Repuestos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/views/Categorias/categorias.html">
+                    <a href="../Categorias/categorias.html">
                         <span class="las la-tags"></span>
                         <span>Categorias de repuestos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/assets/views/Proveedores/proveedores.html">
+                    <a href="../Proveedores/proveedores.html">
                         <span class="las la-truck-moving"></span>
                         <span>Proveedores</span>
                     </a>
                 </li>
                 <li>
-                    <a href="ventas.html">
+                    <a href="./ventas.html" class="active">
                         <span class="las la-shopping-bag"></span>
                         <span>Ventas</span>
                     </a>
                 </li>
                 <li>
                     <a href="reportes.html">
-                        <span class="las la-file-invoice-dollar "></span>
+                        <span class="las la-file-invoice-dollar"></span>
                         <span>Reportes</span>
                     </a>
                 </li>
                 <li>
                     <a href="/assets/views/login.html">
                         <span class="las la-sign-out-alt red"></span>
-                        <span>Cerrar Sesion</span>
+                        <span>Cerrar Sesión</span>
                     </a>
                 </li>
             </ul>
@@ -91,84 +91,53 @@
             <label for="menu-toggle" class="menu-toggler">
                 <span class="las la-bars"></span>
             </label>
-            <h1 class="white">Clientes</h1>
-            <!-- <div class="search">
-                <span class="las la-search"></span>
-                <input type="search" placeholder="Buscar...">
-            </div> -->
+            <h1 class="white">Ventas</h1>
             <div class="head-icons">
                 <span class="las la-bell"></span>
                 <span class="las la-bookmark"></span>
                 <span class="las la-user"></span>
             </div>
-            
         </header>
         <main>
-            <!-- <h1>Clientes</h1> -->
             <div class="buscarC">
                 <div class="search2">
                     <span class="las la-search"></span>
-                    <input type="search" placeholder="Buscar Cliente...">
+                    <input type="search" placeholder="Buscar Venta...">
                 </div>
                 <div class="crearc">
                     <span class="las la-plus"></span>
-                    <a href="./crearCliente.html">Nuevo Cliente</a>
+                    <a href="/assets/views/Ventas/crearVenta.html">Nueva Venta</a>
                 </div>
             </div>
-                <div class="recent-orders">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Documento</th>
-                                <th>Nombre</th>
-                                <th>Telefono</th>
-                                <th>Email</th>
-                                <th>Operaciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                           
-                            
-                        </tbody>
-                    </table>
+            <div class="recent-orders">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Operaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="content">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="new-users">
+                <h2>Ventas Existentes</h2>
+                <div class="user-list">
+                    
                 </div>
-                <div class="new-users">
-                    <h2>Nuevos clientes</h2>
-                    <div class="user-list">
-                        <div class="user">
-                            <img>
-                            <h2>Jack</h2>
-                            <p>Hace 54 minutos</p>
-                        </div>
-                        <div class="user">
-                            <img>
-                            <h2>Alber</h2>
-                            <p>Hace 1 hora</p>
-                        </div>
-                        <div class="user">
-                            <img>
-                            <h2>Emanuel</h2>
-                            <p>Hace 3 horas</p>
-                        </div>
-                        <div class="user">
-                            <img>
-                            <h2>Paola</h2>
-                            <p>Hace 6 horas</p>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
+            </div>
+        </main>
     </div>
-
-
-    <label id="close-mobile-menu" for="menu-toggle"></label>        
-
+    <label id="close-mobile-menu" for="menu-toggle"></label>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="/assets/js/oders.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script> -->
+    <script src="vfunction.js"></script>
+    
 
 </body>
 </html>

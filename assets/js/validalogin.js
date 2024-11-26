@@ -1,56 +1,56 @@
-// 'use strict';
-// const btn_registro = document.querySelector('#btn-registro');
-// const uname = document.querySelector('#uname');
-// const documento = document.querySelector('#documento');
-// const telefono = document.querySelector('#telefono');
-// const email = document.querySelector('#email');
-// const direccion = document.querySelector('#direccion');
-// const password = document.querySelector('#password');
-// const confirma = document.querySelector('#confirma');
+'use strict';
+const btn_registro = document.querySelector('#btn-registro');
+const uname = document.querySelector('#uname');
+const documento = document.querySelector('#documento');
+const telefono = document.querySelector('#telefono');
+const email = document.querySelector('#email');
+const direccion = document.querySelector('#direccion');
+const password = document.querySelector('#password');
+const confirma = document.querySelector('#confirma');
 
 
-// let validar = () => {
-//     let inputs_requeridos = document.querySelectorAll('#frm-registro input');
-//     let error = false;
+let validar = () => {
+    let inputs_requeridos = document.querySelectorAll('#frmregistro input');
+    let error = false;
 
-//     for(let i = 0; i < inputs_requeridos.length; i++) {
-//         if (inputs_requeridos[i].value == "") {
-//             inputs_requeridos[i].classList.add('error');
-//             error = true;
-//         }else{
-//             inputs_requeridos[i].classList.remove('error');
-//         }
-//     }
+    for(let i = 0; i < inputs_requeridos.length; i++) {
+        if (inputs_requeridos[i].value == "") {
+            inputs_requeridos[i].classList.add('error');
+            error = true;
+        }else{
+            inputs_requeridos[i].classList.remove('error');
+        }
+    }
     
-//     return error;
-// };
+    return error;
+};
 
-// let obtener_datos = () => {
-//     let error = validar();
+let obtener_datos = () => {
+    let error = validar();
 
-//     if(error){
-//         Swal.fire({
-//             'title': 'Registro Invalido',
-//             'text': 'Digite todos los campos correctamente',
-//             'icon': 'warning'
-//         })
-//     }else{
-//         Swal.fire({
-//             'title': 'Registro exitoso',
-//             'text': 'Se ha registrado existosamente',
-//             'icon': 'success' 
-//         });
-//         console.log(uname.value);
-//         console.log(documento.value);
-//         console.log(telefono.value);
-//         console.log(email.value);
-//         console.log(direccion.value);
-//         console.log(password.value);
-//         console.log(confirma.value);
-//     }
-// };
+    if(error){
+        Swal.fire({
+            'title': 'Registro Invalido',
+            'text': 'Digite todos los campos correctamente',
+            'icon': 'warning'
+        })
+    }else{
+        Swal.fire({
+            'title': 'Registro exitoso',
+            'text': 'Se ha registrado existosamente',
+            'icon': 'success' 
+        });
+        console.log(uname.value);
+        console.log(documento.value);
+        console.log(telefono.value);
+        console.log(email.value);
+        console.log(direccion.value);
+        console.log(password.value);
+        console.log(confirma.value);
+    }
+};
 
-// btn_registro.addEventListener("click", obtener_datos);
+btn_registro.addEventListener("click", obtener_datos);
 // let id = (id) => document.getElementById(id);
 // let classes = (classes) => document.getElementsByClassName(classes);
 

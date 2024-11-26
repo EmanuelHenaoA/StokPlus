@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
+    --main: rgb(63, 66, 238);
     --bg: #181a1e;
     --bg-body: #202528;
     --color-primary: #6C9BCF;
@@ -10,7 +11,11 @@
 }
 
 body{
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: var(--bg);
+}
+
+.blue{
+    color: rgb(63, 66, 238);
 }
 
 * {
@@ -54,12 +59,13 @@ body{
     color: var(--color-white);
     /* padding: var(--card-padding); */
     border-radius: var(--card-border-radius);
+    border-radius: 7px;
     /* margin: 25px auto; */
     /* box-shadow: var(--box-shadow); */
     width: 100%;
     max-width: 470px;
-    height: 100%; /* Limita el ancho máximo */
-    margin: auto; /* Centra horizontalmente */
+    /* height: 100%; Limita el ancho máximo */
+    /* margin: auto; Centra horizontalmente */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -68,8 +74,9 @@ body{
     flex-direction: column;
     align-items: center; 
     gap: 0.8rem;
-    padding: 10px;
+    padding: 18px;
     /* transition: all 0.3s ease; */
+    margin-top: 15px;
 }
 
 .checkbox-container .inputss{
@@ -90,8 +97,12 @@ body{
     width: 100%;
     color: white;
     background-color: var(--bg);
-    padding: 15px; 
+    padding: 14px; 
     border-radius: var(--card-border-radius);  
+}
+
+.opciones-secundarias {
+    display: none;
 }
 
 .btn {

@@ -18,46 +18,103 @@
         <input class="inputss" type="text" id="estadoRol" placeholder="Estado" required>
           <label>Selecciona los permisos y privilegios que deseas que tenga el rol:</label> 
             <!-- Checkbox principal -->
-      <div >
-            <label>
-                <input type="checkbox" class="privil" id="compras-checkbox" onclick="toggleOpciones()">
+            <div>
+                <label>
+                    <input type="checkbox" class="privil" id="compras-checkbox" onclick="toggleOpciones('compras-opciones')">
                     Compras
-            </label>        
-            <!-- <div id="opciones-secundarias">
-                <label>
-                <input type="checkbox" name="opciones" value="ver">
-                    Ver
-                </label><br>
-                <label>
-                <input type="checkbox" name="opciones" value="crear">
-                    Crear
-                </label><br>
-                <label>
-                <input type="checkbox" name="opciones" value="editar">
-                    Editar
-                </label><br>
-                <label>
-                <input type="checkbox" name="opciones" value="eliminar">
-                    Eliminar
                 </label>
-            </div> -->
-            <label>
-                <input type="checkbox" id="compras-checkbox" onclick="toggleOpciones()">
+                <div id="compras-opciones" class="opciones-secundarias">
+                    <label>
+                        <input type="checkbox" name="opciones" value="ver">
+                        Ver
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="crear">
+                        Crear
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="editar">
+                        Editar
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="eliminar">
+                        Eliminar
+                    </label>
+                </div>
+                <label class="">
+                    <input type="checkbox" id="ventas-checkbox" onclick="toggleOpciones('ventas-opciones')">
                     Ventas
-            </label>    
-            <label>
-                <input type="checkbox" id="compras-checkbox" onclick="toggleOpciones()">
-                Configuracion
-            </label> 
-            <label>
-                <input type="checkbox" id="compras-checkbox" onclick="toggleOpciones()">
+                </label>
+                <div id="ventas-opciones" class="opciones-secundarias">
+                    <label>
+                        <input type="checkbox" name="opciones" value="ver">
+                        Ver
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="crear">
+                        Crear
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="editar">
+                        Editar
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="eliminar">
+                        Eliminar
+                    </label>
+                </div>
+                <label>
+                    <input type="checkbox" id="configuracion-checkbox" onclick="toggleOpciones('configuracion-opciones')">
+                    Configuración
+                </label>
+                <div id="configuracion-opciones" class="opciones-secundarias">
+                    <label>
+                        <input type="checkbox" name="opciones" value="ver">
+                        Ver
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="crear">
+                        Crear
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="editar">
+                        Editar
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="eliminar">
+                        Eliminar
+                    </label>
+                </div>
+                <label>
+                    <input type="checkbox" id="usuarios-checkbox" onclick="toggleOpciones('usuarios-opciones')">
                     Usuarios
-            </label>   
-        </div>     
+                </label>
+                <div id="usuarios-opciones" class="opciones-secundarias">
+                    <label>
+                        <input type="checkbox" name="opciones" value="ver">
+                        Ver
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="crear">
+                        Crear
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="editar">
+                        Editar
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="opciones" value="eliminar">
+                        Eliminar
+                    </label>
+                </div>
+            </div>
+              
     </div>
     <button type="button" class="btn" onclick="createRoles()">Crear</button>
     </div>
     </form>
     <script src="/assets/js/functions.js"></script>
+    <script src="/assets/js/opciones.js"></script>
+
 </body>
 </html>
